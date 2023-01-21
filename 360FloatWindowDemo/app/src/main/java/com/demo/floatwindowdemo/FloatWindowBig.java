@@ -18,10 +18,8 @@ import android.widget.TableRow;
 import android.widget.TextView;
 import android.widget.Toast;
 
-import java.io.BufferedReader;
 import java.io.IOException;
 import java.io.InputStream;
-import java.io.InputStreamReader;
 import java.lang.reflect.Field;
 import java.util.ArrayList;
 import java.util.Arrays;
@@ -134,29 +132,40 @@ public class FloatWindowBig extends LinearLayout {
                 //collectionutil没有不得不使用retainall,有个大坑，
                 // 如果两个set一模一样，返回false 最好不要选四个
                 // 避免侵入式
+                //地图={刷点组名称} 地图_刷点组名称={出生点位}
 
                 try {
                     Class clz = Class.forName("com.demo.floatwindowdemo.Data");
+                    //获取地图刷点组名称
                     Field field = clz.getField(Data.map);
+                    Field cnFiled=clz.getField(Data.map+"_cn");
                     String[] s = (String[]) field.get(null);
-                    Data.possibleMaps=new ArrayList<>();
+                    String[] c = (String[])cnFiled.get(null);
+                    //判断哪一组刷点符合条件
+                    Data.possibleMaps = new ArrayList<>();
+                    List<String> cnBorn=new ArrayList<>();
                     //i 刷点名称
                     for (int i = 0; i < s.length; i++) {
 
-                        Field f = clz.getField(Data.map + "_" + s[i]);
+                        Field f = clz.getField(Data.map + "_" + s[i]);//出生点位
                         String[] humanBorn = (String[]) f.get(null);
                         List<String> list = Arrays.stream(humanBorn).collect(Collectors.toList());
                         list.retainAll(checked);
                         if (list.isEmpty()) {
-                            log.info(String.format("%s no match",s[i]));
+                            log.info(String.format("%s no match", s[i]));
 //                            Toast.makeText(context, "no match", Toast.LENGTH_LONG).show();
-                        } else if(list.size()>1){
+                        } else if (list.size() > 1) {
                             Data.possibleMaps.add(s[i]);
+                            cnBorn.add(c[i]);
                         }
                     }
-                    Toast.makeText(context, "屠夫位置:" + Data.possibleMaps.toString(), Toast.LENGTH_LONG).show();
+                    if(Data.possibleMaps.size()==0){
+                        Toast.makeText(context, "no match", Toast.LENGTH_LONG).show();
+                        return;
+                    }
+                    Toast.makeText(context, "屠夫位置:" + cnBorn.toString(), Toast.LENGTH_LONG).show();
                     List<ImageView> list = new ArrayList<>();
-                    AssetManager assetManager= context.getAssets();
+                    AssetManager assetManager = context.getAssets();
                     for (int j = 0; j < Data.possibleMaps.size(); j++) {
                         InputStream is = null;
                         String filename = Data.possibleMaps.get(j);
@@ -168,23 +177,31 @@ public class FloatWindowBig extends LinearLayout {
                         list.add(imageView);
                     }
                     pagerAdapter.setData(list);
-//                    viewPager.setVisibility(View.VISIBLE);
-                   viewPager.getAdapter().notifyDataSetChanged();
+                    viewPager.setVisibility(View.VISIBLE);
+                    viewPager.getAdapter().notifyDataSetChanged();
 
                     //不知道多次设置会不会出问题
                 } catch (ClassNotFoundException e) {
+                    Toast.makeText(context, "错误FWB176", Toast.LENGTH_LONG).show();
                     throw new RuntimeException(e);
                 } catch (NoSuchFieldException e) {
+                    Toast.makeText(context, "错误FWB180", Toast.LENGTH_LONG).show();
                     throw new RuntimeException(e);
                 } catch (IllegalAccessException e) {
+                    Toast.makeText(context, "错误FWB184", Toast.LENGTH_LONG).show();
                     throw new RuntimeException(e);
                 } catch (IOException e) {
+                    Toast.makeText(context, "错误FWB188", Toast.LENGTH_LONG).show();
                     throw new RuntimeException(e);
+                } catch (Exception e){
+                    Toast.makeText(context, "错误FWB193", Toast.LENGTH_LONG).show();
+                    throw new RuntimeException(e);
+
                 }
 
             }
         });
-
+//bug啊我诅咒你
         killer.setOnClickListener(new OnClickListener() {
             @Override
             public void onClick(View v) {
@@ -203,8 +220,11 @@ public class FloatWindowBig extends LinearLayout {
                     pagerAdapter.setData(list);
                     viewPager.setVisibility(View.VISIBLE);
                     pagerAdapter.notifyDataSetChanged();
-                    Toast.makeText(context, "success", Toast.LENGTH_LONG).show();
                 } catch (IOException e) {
+                    Toast.makeText(context, "错误FWB220", Toast.LENGTH_LONG).show();
+                    throw new RuntimeException(e);
+                } catch (Exception e){
+                    Toast.makeText(context, "错误FWB223", Toast.LENGTH_LONG).show();
                     throw new RuntimeException(e);
                 }
             }
@@ -212,13 +232,60 @@ public class FloatWindowBig extends LinearLayout {
         ysf.setOnClickListener(new OnClickListener() {
             @Override
             public void onClick(View v) {
-                Toast.makeText(context, "暂不支持", Toast.LENGTH_LONG).show();
+                try {
+                    List<ImageView> list = new ArrayList<>();
+                    LinkedList<String> checked = getChecked(context, Data.map, Data.K);
+                    if (checked.isEmpty()){
+                        Toast.makeText(context, "先选出生点", Toast.LENGTH_LONG).show();
+                        return;
+                    }
+                    String name = checked.getFirst();
+                    InputStream is = null;
+                    is = getResources().getAssets().open(String.format("dwrg_maps/%s/%sysf.png", Data.map, name));
+                    Bitmap bitmap = BitmapFactory.decodeStream(is);
+                    //TODO 判空
+                    ImageView imageView = new ImageView(context);
+                    imageView.setImageBitmap(bitmap);
+                    list.add(imageView);
+                    pagerAdapter.setData(list);
+                    viewPager.setVisibility(View.VISIBLE);
+                    pagerAdapter.notifyDataSetChanged();
+                } catch (IOException e) {
+                    Toast.makeText(context, "错误FWB247", Toast.LENGTH_LONG).show();
+                    throw new RuntimeException(e);
+                }catch (Exception e){
+                    Toast.makeText(context, "错误FWB250", Toast.LENGTH_LONG).show();
+                    throw new RuntimeException(e);
+                }
+//                Toast.makeText(context, "暂不支持", Toast.LENGTH_LONG).show();
             }
         });
         cellar.setOnClickListener(new OnClickListener() {
             @Override
             public void onClick(View v) {
-                Toast.makeText(context, "暂不支持", Toast.LENGTH_LONG).show();
+                try {
+                    if(Data.map!=null&& !Data.map.isEmpty()){
+
+                        List<ImageView> list = new ArrayList<>();
+                        InputStream is = null;
+                        is = getResources().getAssets().open(String.format("dwrg_maps/cellar/%s.jpg", Data.map));
+                        Bitmap bitmap = BitmapFactory.decodeStream(is);
+                        //TODO 判空
+                        ImageView imageView = new ImageView(context);
+                        imageView.setImageBitmap(bitmap);
+                        list.add(imageView);
+                        pagerAdapter.setData(list);
+                        viewPager.setVisibility(View.VISIBLE);
+                        pagerAdapter.notifyDataSetChanged();
+                    }
+                    else{
+                        Toast.makeText(context, "先选地图278", Toast.LENGTH_LONG).show();
+                        return;
+                    }
+                } catch (IOException e) {
+                    Toast.makeText(context, "错误FWB282", Toast.LENGTH_LONG).show();
+                    throw new RuntimeException(e);
+                }
             }
         });
 
@@ -256,9 +323,9 @@ public class FloatWindowBig extends LinearLayout {
                 for (int j = 0; j < ((TableRow) parentRow).getChildCount(); j++) {
                     CheckBox cb = (CheckBox) ((TableRow) parentRow).getChildAt(j);
                     if (cb.isChecked()) {
-                        if(state==Data.K){
+                        if (state == Data.K) {
                             checked.add(cb.getTag().toString());
-                        }else{
+                        } else {
 
                             checked.add(cb.getText().toString());
                         }
@@ -271,8 +338,6 @@ public class FloatWindowBig extends LinearLayout {
         return checked;
 
     }
-
-
 
 
 }

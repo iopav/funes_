@@ -4,6 +4,7 @@
     android:id="@+id/small_window_layout"
 	android:layout_width="60dip"
 	android:layout_height="25dip"
+	android:alpha="0.5"
 	android:background="@drawable/background"
     >
     <TextView 

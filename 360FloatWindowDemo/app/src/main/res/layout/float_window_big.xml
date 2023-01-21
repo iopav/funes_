@@ -14,7 +14,7 @@
         android:layout_width="wrap_content"
         android:layout_height="wrap_content"
         android:orientation="vertical"
-        android:padding="10dp">
+        android:padding="1dp">
 
 
         <RadioGroup
@@ -25,42 +25,48 @@
 
         <RadioButton
             android:id="@+id/radioButton1"
-            android:layout_width="60dp"
+            android:layout_width="0dp"
+            android:layout_weight="1"
             android:layout_height="48dp"
             android:text="军"
             android:tag="0"/>
 
             <RadioButton
                 android:id="@+id/radioButton2"
-                       android:layout_width="60dp"
+                android:layout_width="0dp"
+                android:layout_weight="1"
                 android:layout_height="48dp"
                 android:text="红"
                 android:tag="1"/>
 
             <RadioButton
                 android:id="@+id/radioButton3"
-                       android:layout_width="60dp"
+                android:layout_width="0dp"
+                android:layout_weight="1"
                 android:layout_height="48dp"
                 android:text="圣"
                 android:tag="2"/>
 
             <RadioButton
                 android:id="@+id/radioButton4"
-                           android:layout_width="60dp"
+                android:layout_width="0dp"
+                android:layout_weight="1"
                 android:layout_height="48dp"
                 android:text="湖"
                 android:tag="3"/>
 
             <RadioButton
                 android:id="@+id/radioButton5"
-                android:layout_width="60dp"
+                android:layout_width="0dp"
+                android:layout_weight="1"
                 android:layout_height="48dp"
                 android:text="月"
                 android:tag="4"/>
 
             <RadioButton
                 android:id="@+id/radioButton6"
-                android:layout_width="60dp"
+                android:layout_width="0dp"
+                android:layout_weight="1"
                 android:layout_height="48dp"
                 android:text="冰"
                 android:tag="5"/>
@@ -68,7 +74,8 @@
 
             <RadioButton
                 android:id="@+id/radioButton7"
-                           android:layout_width="60dp"
+                android:layout_width="0dp"
+                android:layout_weight="1"
                 android:layout_height="48dp"
                 android:text="永"
                 android:tag="6"/>
@@ -79,7 +86,7 @@
             android:id="@+id/rl"
             android:layout_width="match_parent"
             android:layout_height="30dp"
-            android:layout_gravity="center_horizontal"
+
             android:gravity="center"
             android:text="人"
             android:textColor="@android:color/white" />
@@ -534,7 +541,7 @@
             android:id="@+id/tf"
             android:layout_width="match_parent"
             android:layout_height="30dp"
-            android:layout_gravity="center_horizontal"
+
             android:gravity="center"
             android:text="屠夫"
             android:textColor="@android:color/white" />
@@ -856,10 +863,10 @@
 
         <android.support.v4.view.ViewPager
             android:id="@+id/viewPager"
-            android:layout_width="wrap_content"
+            android:layout_width="340dp"
             android:layout_height="200dp"
 
-            android:visibility="visible" />
+            android:visibility="gone" />
 
         <LinearLayout
             android:layout_width="match_parent"
@@ -882,7 +889,7 @@
             <TextView
                 android:id="@+id/close"
                 android:layout_width="0dp"
-                android:layout_height="40dip"
+                android:layout_height="match_parent"
                 android:layout_gravity="center_vertical"
                 android:layout_weight="1"
                 android:gravity="center"
