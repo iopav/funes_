@@ -8,21 +8,55 @@
         android:layout_width="match_parent"
         android:layout_height="60dp"
         android:fitsSystemWindows="true"
-        android:background="#4C90D6">
+        android:background="#757575">
+        <TextView
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:text="Funes_第五人格外骨骼"
+            android:textSize="24dp">
+
+        </TextView>
         <TextView
             android:id="@+id/title"
             android:layout_width="wrap_content"
             android:layout_height="wrap_content"
-            android:text="FloatingWindow"
+            android:text="funes"
             android:layout_gravity="center"/>
     </android.support.v7.widget.Toolbar>
+
+    <TextView
+        android:id="@+id/intro"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:layout_below="@+id/toolBar"
+
+        android:gravity=""
+        android:text="欢迎使用富内斯，目前功能:出生点地图\n
+更新计划:优化控件耦合，提高运行速度\n
+根据过场动画判断点位\n
+约瑟夫导航\n
+地窖点\n
+线程拆分\n
+地图-永眠镇 冰工厂数据导入\n
+使用说明:
+\n人类玩家:\n
+组排适用，选择2个以上出生点,点击[人]即可推理屠夫位置并显示地图\n
+\n屠夫玩家\n选择你的出生点并点击[屠]\n
+Bug反馈:github.com/iopav/funes_ 项目里提交request
+\n或者直接截图告诉我
+\n制作：我  测试：你
+\n©iopav&flyingfishes(感谢ff老师提供框架)
+"
+        android:textSize="16dp">
+
+    </TextView>
 
     <Button
         android:id="@+id/start_float_window"
         android:layout_width="wrap_content"
         android:layout_height="wrap_content"
-        android:text="Start"
-        android:layout_below="@+id/toolBar"
+        android:text="Game Start!"
+        android:layout_below="@+id/intro"
         android:layout_centerHorizontal="true"
         android:background="#4C90D6"
         android:layout_marginTop="20dp">

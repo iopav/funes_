@@ -3,7 +3,10 @@
   <component name="ProjectModuleManager">
     <modules>
       <module fileurl="file://$PROJECT_DIR$/360FloatWindowDemo.iml" filepath="$PROJECT_DIR$/360FloatWindowDemo.iml" />
-      <module fileurl="file://$PROJECT_DIR$/app/app.iml" filepath="$PROJECT_DIR$/app/app.iml" />
+      <module fileurl="file://$PROJECT_DIR$/.idea/modules/app/360FloatWindowDemo.app.iml" filepath="$PROJECT_DIR$/.idea/modules/app/360FloatWindowDemo.app.iml" />
+      <module fileurl="file://$PROJECT_DIR$/.idea/modules/app/360FloatWindowDemo.app.androidTest.iml" filepath="$PROJECT_DIR$/.idea/modules/app/360FloatWindowDemo.app.androidTest.iml" />
+      <module fileurl="file://$PROJECT_DIR$/.idea/modules/app/360FloatWindowDemo.app.main.iml" filepath="$PROJECT_DIR$/.idea/modules/app/360FloatWindowDemo.app.main.iml" />
+      <module fileurl="file://$PROJECT_DIR$/.idea/modules/app/360FloatWindowDemo.app.unitTest.iml" filepath="$PROJECT_DIR$/.idea/modules/app/360FloatWindowDemo.app.unitTest.iml" />
     </modules>
   </component>
 </project>
