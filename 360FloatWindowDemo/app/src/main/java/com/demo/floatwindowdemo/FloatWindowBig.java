@@ -126,15 +126,23 @@ public class FloatWindowBig extends LinearLayout {
         human.setOnClickListener(new OnClickListener() {
             @Override
             public void onClick(View v) {
-
+                if (Data.map==null || Data.map.isEmpty()){
+                    Toast.makeText(context, "先选地图", Toast.LENGTH_SHORT).show();
+                    return;
+                }
 
                 LinkedList<String> checked = getChecked(context, Data.map, Data.H);
+                if (checked.isEmpty()){
+                    Toast.makeText(context, "先选出生点", Toast.LENGTH_LONG).show();
+                    return;
+                }
                 //collectionutil没有不得不使用retainall,有个大坑，
                 // 如果两个set一模一样，返回false 最好不要选四个
                 // 避免侵入式
                 //地图={刷点组名称} 地图_刷点组名称={出生点位}
 
                 try {
+
                     Class clz = Class.forName("com.demo.floatwindowdemo.Data");
                     //获取地图刷点组名称
                     Field field = clz.getField(Data.map);
@@ -174,6 +182,7 @@ public class FloatWindowBig extends LinearLayout {
                         //TODO 判空
                         ImageView imageView = new ImageView(context);
                         imageView.setImageBitmap(bitmap);
+
                         list.add(imageView);
                     }
                     pagerAdapter.setData(list);
@@ -206,20 +215,29 @@ public class FloatWindowBig extends LinearLayout {
             @Override
             public void onClick(View v) {
                 try {
+                    if (Data.map==null || Data.map.isEmpty()){
+                        Toast.makeText(context, "先选地图", Toast.LENGTH_SHORT).show();
+                        return;
+                    }
                     List<ImageView> list = new ArrayList<>();
                     LinkedList<String> checked = getChecked(context, Data.map, Data.K);
+                    if (checked.isEmpty()){
+                        Toast.makeText(context, "先选出生点", Toast.LENGTH_LONG).show();
+                        return;
+                    }
                     String name = checked.getFirst();
                     InputStream is = null;
                     is = getResources().getAssets().open(String.format("dwrg_maps/%s/%s.png", Data.map, name));
-
                     Bitmap bitmap = BitmapFactory.decodeStream(is);
                     //TODO 判空
                     ImageView imageView = new ImageView(context);
                     imageView.setImageBitmap(bitmap);
+
                     list.add(imageView);
                     pagerAdapter.setData(list);
                     viewPager.setVisibility(View.VISIBLE);
                     pagerAdapter.notifyDataSetChanged();
+                    ChangeVisibility(context, Data.map, View.GONE);
                 } catch (IOException e) {
                     Toast.makeText(context, "错误FWB220", Toast.LENGTH_LONG).show();
                     throw new RuntimeException(e);
@@ -233,6 +251,11 @@ public class FloatWindowBig extends LinearLayout {
             @Override
             public void onClick(View v) {
                 try {
+                    if (Data.map==null || Data.map.isEmpty()){
+                        Toast.makeText(context, "先选地图", Toast.LENGTH_SHORT).show();
+                        return;
+                    }
+
                     List<ImageView> list = new ArrayList<>();
                     LinkedList<String> checked = getChecked(context, Data.map, Data.K);
                     if (checked.isEmpty()){
@@ -246,13 +269,16 @@ public class FloatWindowBig extends LinearLayout {
                     //TODO 判空
                     ImageView imageView = new ImageView(context);
                     imageView.setImageBitmap(bitmap);
+                    imageView.setImageAlpha(230);
                     list.add(imageView);
                     pagerAdapter.setData(list);
                     viewPager.setVisibility(View.VISIBLE);
                     pagerAdapter.notifyDataSetChanged();
+                    ChangeVisibility(context, Data.map, View.GONE);
+
                 } catch (IOException e) {
-                    Toast.makeText(context, "错误FWB247", Toast.LENGTH_LONG).show();
-                    throw new RuntimeException(e);
+                    Toast.makeText(context, "错误FWB247,文件不存在", Toast.LENGTH_LONG).show();
+//                    throw new RuntimeException(e);
                 }catch (Exception e){
                     Toast.makeText(context, "错误FWB250", Toast.LENGTH_LONG).show();
                     throw new RuntimeException(e);
@@ -277,6 +303,7 @@ public class FloatWindowBig extends LinearLayout {
                         pagerAdapter.setData(list);
                         viewPager.setVisibility(View.VISIBLE);
                         pagerAdapter.notifyDataSetChanged();
+                        ChangeVisibility(context, Data.map, View.GONE);
                     }
                     else{
                         Toast.makeText(context, "先选地图278", Toast.LENGTH_LONG).show();
@@ -297,12 +324,12 @@ public class FloatWindowBig extends LinearLayout {
         String humanTable = map + Data.H;
         log.info(String.format("set %s %s %d", killerTable, humanTable, state));
         int kId = getResources().getIdentifier(killerTable, "id", context.getPackageName());
-        int hId = getResources().getIdentifier(humanTable, "id", context.getPackageName());
+//        int hId = getResources().getIdentifier(humanTable, "id", context.getPackageName());
 
         TableLayout killerTL = (TableLayout) findViewById(kId);
         killerTL.setVisibility(state);
-        TableLayout humanTL = (TableLayout) findViewById(hId);
-        humanTL.setVisibility(state);
+//        TableLayout humanTL = (TableLayout) findViewById(hId);
+//        humanTL.setVisibility(state);
     }
 
     public TableLayout getTableLayout(Context context, String map, String type) {
@@ -341,6 +368,7 @@ public class FloatWindowBig extends LinearLayout {
 
 
 }
+
 
 //
 //

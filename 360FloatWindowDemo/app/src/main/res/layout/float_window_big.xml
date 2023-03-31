@@ -1,12 +1,10 @@
 <?xml version="1.0" encoding="utf-8"?>
 <ScrollView xmlns:android="http://schemas.android.com/apk/res/android"
-    xmlns:app="http://schemas.android.com/apk/res-auto"
-    xmlns:tools="http://schemas.android.com/tools"
     android:id="@+id/sv"
     android:layout_width="wrap_content"
     android:layout_height="wrap_content"
     android:layout_gravity="center"
-    android:background="#4D000000"
+    android:background="#16000000"
     android:fillViewport="true">
 
     <LinearLayout
@@ -23,62 +21,85 @@
             android:layout_height="match_parent"
             android:orientation="horizontal">
 
-        <RadioButton
-            android:id="@+id/radioButton1"
-            android:layout_width="0dp"
-            android:layout_weight="1"
-            android:layout_height="48dp"
-            android:text="军"
-            android:tag="0"/>
+            <RadioButton
+                android:id="@+id/radioButton1"
+                android:layout_width="0dp"
+                android:layout_weight="1"
+                android:layout_height="48dp"
+                android:tag="0"
+                android:text="军"
+                android:textColor="#FFFFFF" />
 
             <RadioButton
                 android:id="@+id/radioButton2"
                 android:layout_width="0dp"
-                android:layout_weight="1"
                 android:layout_height="48dp"
+                android:layout_weight="1"
+                android:tag="1"
                 android:text="红"
-                android:tag="1"/>
+                android:textColor="#FFFFFF" />
 
             <RadioButton
                 android:id="@+id/radioButton3"
                 android:layout_width="0dp"
-                android:layout_weight="1"
                 android:layout_height="48dp"
+                android:layout_weight="1"
+                android:tag="2"
                 android:text="圣"
-                android:tag="2"/>
+                android:textColor="#FFFFFF" />
 
             <RadioButton
                 android:id="@+id/radioButton4"
                 android:layout_width="0dp"
-                android:layout_weight="1"
                 android:layout_height="48dp"
+                android:layout_weight="1"
+                android:tag="3"
                 android:text="湖"
-                android:tag="3"/>
+                android:textColor="#FFFFFF" />
 
             <RadioButton
                 android:id="@+id/radioButton5"
                 android:layout_width="0dp"
-                android:layout_weight="1"
                 android:layout_height="48dp"
+                android:layout_weight="1"
+                android:tag="4"
                 android:text="月"
-                android:tag="4"/>
+                android:textColor="#FFFFFF" />
 
             <RadioButton
                 android:id="@+id/radioButton6"
                 android:layout_width="0dp"
-                android:layout_weight="1"
                 android:layout_height="48dp"
+                android:layout_weight="1"
+                android:tag="5"
                 android:text="冰"
-                android:tag="5"/>
+                android:textColor="#FFFFFF" />
 
 
             <RadioButton
                 android:id="@+id/radioButton7"
                 android:layout_width="0dp"
-                android:layout_weight="1"
                 android:layout_height="48dp"
+                android:layout_weight="1"
+                android:tag="6"
                 android:text="永"
-                android:tag="6"/>
+                android:textColor="#FFFFFF" />
+            <RadioButton
+                android:id="@+id/radioButton8"
+                android:layout_width="0dp"
+                android:layout_height="48dp"
+                android:layout_weight="1"
+                android:tag="7"
+                android:text="唐"
+                android:textColor="#FFFFFF" />
+            <RadioButton
+                android:id="@+id/radioButton9"
+                android:layout_width="0dp"
+                android:layout_height="48dp"
+                android:layout_weight="1"
+                android:tag="8"
+                android:text="隐"
+                android:textColor="#FFFFFF" />
         </RadioGroup>
 
         <TextView
@@ -86,11 +107,408 @@
             android:id="@+id/rl"
             android:layout_width="match_parent"
             android:layout_height="30dp"
-
+            android:visibility="gone"
             android:gravity="center"
             android:text="人"
             android:textColor="@android:color/white" />
+        <TableLayout
+            android:id="@+id/yin_human"
+            android:layout_width="match_parent"
+            android:layout_height="match_parent"
+            android:visibility="gone">
+        </TableLayout>
+        <TableLayout
+            android:id="@+id/yin_killer"
+            android:layout_width="match_parent"
+            android:layout_height="match_parent"
+            android:visibility="gone"></TableLayout>
+        <TableLayout
+            android:id="@+id/town_human"
+            android:layout_width="match_parent"
+            android:layout_height="match_parent"
+            android:visibility="gone">
+            <TableRow
+                android:layout_width="match_parent"
+                android:layout_height="match_parent" >
+                <CheckBox
+                    android:textColor="#FFFFFF"
+                    android:id="@+id/checkBox84"
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:text="饰伞屋"
+                    android:tag="shisanwu" />
+                <CheckBox
+                    android:textColor="#FFFFFF"
+                    android:id="@+id/checkBox85"
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:text="湖边废墟"
+                    android:tag="hubianfeixu" />
+                <CheckBox
+                    android:textColor="#FFFFFF"
+                    android:id="@+id/checkBox86"
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:text="人皇机"
+                    android:tag="renhuangji" />
+                <CheckBox
+                    android:textColor="#FFFFFF"
+                    android:id="@+id/checkBox87"
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:text="二站"
+                    android:tag="erzhan" />
+            </TableRow>
+            <TableRow
+                android:layout_width="match_parent"
+                android:layout_height="match_parent">
 
+
+                <CheckBox
+                    android:textColor="#FFFFFF"
+                    android:id="@+id/checkBox88"
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:text=" 湖边两板一窗"
+                    android:tag=" hubianliangbanyichuang" />
+                <CheckBox
+                    android:textColor="#FFFFFF"
+                    android:id="@+id/checkBox89"
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:text="墓地"
+                    android:tag="mudi" />
+                <CheckBox
+                    android:textColor="#FFFFFF"
+                    android:id="@+id/checkBox90"
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:text="四站房"
+                    android:tag="sizhanfang" />
+                <CheckBox
+                    android:textColor="#FFFFFF"
+                    android:id="@+id/checkBox91"
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:text="红蝶楼"
+                    android:tag="hongdielou" />
+            </TableRow>
+            <TableRow
+                android:layout_width="match_parent"
+                android:layout_height="match_parent">
+
+
+                <CheckBox
+                    android:textColor="#FFFFFF"
+                    android:id="@+id/checkBox92"
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:text="大门废墟"
+                    android:tag="damenfeixu" />
+                <CheckBox
+                    android:textColor="#FFFFFF"
+                    android:id="@+id/checkBox93"
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:text="假门房"
+                    android:tag="jiamenfang" />
+                <CheckBox
+                    android:textColor="#FFFFFF"
+                    android:id="@+id/checkBox94"
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:text="三站"
+                    android:tag="sanzhan" />
+                <CheckBox
+                    android:textColor="#FFFFFF"
+                    android:id="@+id/checkBox95"
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:text="居酒屋"
+                    android:tag="jujiuwu" />
+            </TableRow>
+            <TableRow
+                android:layout_width="match_parent"
+                android:layout_height="match_parent">
+
+
+                <CheckBox
+                    android:textColor="#FFFFFF"
+                    android:id="@+id/checkBox96"
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:text="红蝶桥"
+                    android:tag="hongdieqiao" />
+                <CheckBox
+                    android:textColor="#FFFFFF"
+                    android:id="@+id/checkBox97"
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:text="三板废墟"
+                    android:tag="sanbanfeixu" />
+                <CheckBox
+                    android:textColor="#FFFFFF"
+                    android:id="@+id/checkBox98"
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:text="一版一窗"
+                    android:tag="yibanyichuang" />
+            </TableRow>
+        </TableLayout>
+
+        <TableLayout
+            android:id="@+id/rio_memory_human"
+            android:layout_width="match_parent"
+            android:layout_height="match_parent"
+            android:visibility="gone">
+            <TableRow
+                android:layout_width="match_parent"
+                android:layout_height="match_parent" >
+                <CheckBox
+                    android:textColor="#FFFFFF"
+                    android:id="@+id/checkBox99"
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:text="集装箱"
+                    android:tag="jizhuangxiang" />
+                <CheckBox
+                    android:textColor="#FFFFFF"
+                    android:id="@+id/checkBox100"
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:text="月亮门废墟"
+                    android:tag="yueliangmenfeixu" />
+                <CheckBox
+                    android:textColor="#FFFFFF"
+                    android:id="@+id/checkBox101"
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:text="雪人"
+                    android:tag="xueren" />
+                <CheckBox
+                    android:textColor="#FFFFFF"
+                    android:id="@+id/checkBox102"
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:text="两板一窗"
+                    android:tag="liangbanyichuang" />
+            </TableRow>
+            <TableRow
+                android:layout_width="match_parent"
+                android:layout_height="match_parent">
+
+
+                <CheckBox
+                    android:textColor="#FFFFFF"
+                    android:id="@+id/checkBox103"
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:text="大房"
+                    android:tag="dafang" />
+                <CheckBox
+                    android:textColor="#FFFFFF"
+                    android:id="@+id/checkBox104"
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:text="中场"
+                    android:tag="zhongchang" />
+                <CheckBox
+                    android:textColor="#FFFFFF"
+                    android:id="@+id/checkBox105"
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:text="大房角落"
+                    android:tag="dafangjiaoluo" />
+                <CheckBox
+                    android:textColor="#FFFFFF"
+                    android:id="@+id/checkBox106"
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:text="楼梯"
+                    android:tag="louti" />
+            </TableRow>
+            <TableRow
+                android:layout_width="match_parent"
+                android:layout_height="match_parent">
+
+
+                <CheckBox
+                    android:textColor="#FFFFFF"
+                    android:id="@+id/checkBox107"
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:text="南门"
+                    android:tag="nanmen" />
+                <CheckBox
+                    android:textColor="#FFFFFF"
+                    android:id="@+id/checkBox108"
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:text="圣诞树"
+                    android:tag="shengdanshu" />
+                <CheckBox
+                    android:textColor="#FFFFFF"
+                    android:id="@+id/checkBox109"
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:text="月亮门"
+                    android:tag="yueliangmen" />
+                <CheckBox
+                    android:textColor="#FFFFFF"
+                    android:id="@+id/checkBox110"
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:text="油罐"
+                    android:tag="youguan" />
+            </TableRow>
+            <TableRow
+                android:layout_width="match_parent"
+                android:layout_height="match_parent">
+
+
+                <CheckBox
+                    android:textColor="#FFFFFF"
+                    android:id="@+id/checkBox111"
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:text="木屋"
+                    android:tag="muwu" />
+                <CheckBox
+                    android:textColor="#FFFFFF"
+                    android:id="@+id/checkBox112"
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:text="两车"
+                    android:tag="liangche" />
+                <CheckBox
+                    android:textColor="#FFFFFF"
+                    android:id="@+id/checkBox113"
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:text="大门"
+                    android:tag="damen" />
+            </TableRow>
+        </TableLayout>
+
+        <TableLayout
+            android:id="@+id/chinese_street_human"
+            android:layout_width="match_parent"
+            android:layout_height="match_parent"
+            android:visibility="gone">
+            <TableRow
+                android:layout_width="match_parent"
+                android:layout_height="match_parent" >
+                <CheckBox
+                    android:textColor="#FFFFFF"
+                    android:id="@+id/checkBox114"
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:text="古树"
+                    android:tag="gushu" />
+                <CheckBox
+                    android:textColor="#FFFFFF"
+                    android:id="@+id/checkBox115"
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:text="一窗一板"
+                    android:tag="yichuangyiban" />
+                <CheckBox
+                    android:textColor="#FFFFFF"
+                    android:id="@+id/checkBox116"
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:text="醉芳庭"
+                    android:tag="zuifangting" />
+                <CheckBox
+                    android:textColor="#FFFFFF"
+                    android:id="@+id/checkBox117"
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:text="花店"
+                    android:tag="huadian" />
+            </TableRow>
+            <TableRow
+                android:layout_width="match_parent"
+                android:layout_height="match_parent">
+
+
+                <CheckBox
+                    android:textColor="#FFFFFF"
+                    android:id="@+id/checkBox118"
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:text="裁缝铺"
+                    android:tag="caifengpu" />
+                <CheckBox
+                    android:textColor="#FFFFFF"
+                    android:id="@+id/checkBox119"
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:text="剧场"
+                    android:tag="juchang" />
+                <CheckBox
+                    android:textColor="#FFFFFF"
+                    android:id="@+id/checkBox120"
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:text="关公像"
+                    android:tag="guangongxiang" />
+                <CheckBox
+                    android:textColor="#FFFFFF"
+                    android:id="@+id/checkBox121"
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:text="洗浴"
+                    android:tag="xiyu" />
+            </TableRow>
+            <TableRow
+                android:layout_width="match_parent"
+                android:layout_height="match_parent">
+
+
+                <CheckBox
+                    android:textColor="#FFFFFF"
+                    android:id="@+id/checkBox122"
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:text="狮子楼"
+                    android:tag="shizilou" />
+                <CheckBox
+                    android:textColor="#FFFFFF"
+                    android:id="@+id/checkBox123"
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:text="御景轩"
+                    android:tag="yujingxuan" />
+                <CheckBox
+                    android:textColor="#FFFFFF"
+                    android:id="@+id/checkBox124"
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:text="烧饼铺"
+                    android:tag="shaobingpu" />
+                <CheckBox
+                    android:textColor="#FFFFFF"
+                    android:id="@+id/checkBox125"
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:text="雨伞门"
+                    android:tag="yusanmen" />
+            </TableRow>
+            <TableRow
+                android:layout_width="match_parent"
+                android:layout_height="match_parent">
+
+
+                <CheckBox
+                    android:textColor="#FFFFFF"
+                    android:id="@+id/checkBox126"
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:text="酒楼"
+                    android:tag="jiulou" />
+            </TableRow>
+        </TableLayout>
 
         <TableLayout
             android:id="@+id/hospital_human"
@@ -103,29 +521,32 @@
                 android:layout_height="match_parent">
 
                 <CheckBox
+                    android:textColor="#FFFFFF"
                     android:id="@+id/checkBox1"
                     android:layout_width="match_parent"
                     android:layout_height="wrap_content"
                     android:text="无敌废墟" />
 
                 <CheckBox
+                    android:textColor="#FFFFFF"
                     android:id="@+id/checkBox2"
                     android:layout_width="match_parent"
                     android:layout_height="wrap_content"
                     android:text="三板" />
 
                 <CheckBox
+                    android:textColor="#FFFFFF"
                     android:id="@+id/checkBox8"
                     android:layout_width="match_parent"
                     android:layout_height="wrap_content"
                     android:text="小树林" />
 
                 <CheckBox
+                    android:textColor="#FFFFFF"
                     android:id="@+id/checkBox4"
                     android:layout_width="match_parent"
                     android:layout_height="wrap_content"
-                    android:text="木屋"
-                    />
+                    android:text="木屋" />
             </TableRow>
 
             <TableRow
@@ -133,12 +554,14 @@
                 android:layout_height="match_parent">
 
                 <CheckBox
+                    android:textColor="#FFFFFF"
                     android:id="@+id/checkBox5"
                     android:layout_width="match_parent"
                     android:layout_height="wrap_content"
                     android:text="正门废墟" />
 
                 <CheckBox
+                    android:textColor="#FFFFFF"
 
                     android:id="@+id/checkBox6"
                     android:layout_width="match_parent"
@@ -146,12 +569,14 @@
                     android:text="医院" />
 
                 <CheckBox
+                    android:textColor="#FFFFFF"
                     android:id="@+id/checkBox7"
                     android:layout_width="match_parent"
                     android:layout_height="wrap_content"
                     android:text="女神像" />
 
                 <CheckBox
+                    android:textColor="#FFFFFF"
                     android:id="@+id/checkBox9"
                     android:layout_width="match_parent"
                     android:layout_height="wrap_content"
@@ -164,24 +589,14 @@
                 android:layout_height="match_parent">
 
                 <CheckBox
+                    android:textColor="#FFFFFF"
                     android:id="@+id/checkBox3"
                     android:layout_width="match_parent"
                     android:layout_height="wrap_content"
                     android:text="小门" />
             </TableRow>
         </TableLayout>
-        <TableLayout
-            android:id="@+id/rio_memory_human"
-            android:layout_width="match_parent"
-            android:layout_height="match_parent"
-            android:visibility="gone">
-        </TableLayout>
-        <TableLayout
-            android:id="@+id/town_human"
-            android:layout_width="match_parent"
-            android:layout_height="match_parent"
-            android:visibility="gone">
-        </TableLayout>
+
 
         <TableLayout
             android:id="@+id/military_factory_human"
@@ -194,39 +609,41 @@
                 android:layout_height="match_parent">
 
                 <CheckBox
+                    android:textColor="#FFFFFF"
                     android:id="@+id/checkBox10"
                     android:layout_width="match_parent"
                     android:layout_height="wrap_content"
                     android:text="中场" />
 
                 <CheckBox
+                    android:textColor="#FFFFFF"
                     android:id="@+id/checkBox11"
                     android:layout_width="match_parent"
                     android:layout_height="wrap_content"
                     android:text="小门" />
 
                 <CheckBox
+                    android:textColor="#FFFFFF"
                     android:id="@+id/checkBox13"
                     android:layout_width="match_parent"
                     android:layout_height="wrap_content"
                     android:text="大门" />
 
                 <CheckBox
+                    android:textColor="#FFFFFF"
                     android:id="@+id/checkBox15"
                     android:layout_width="match_parent"
                     android:layout_height="wrap_content"
                     android:text="木屋" />
 
                 <CheckBox
+                    android:textColor="#FFFFFF"
                     android:id="@+id/checkBox16"
                     android:layout_width="match_parent"
                     android:layout_height="wrap_content"
                     android:text="厂房" />
             </TableRow>
         </TableLayout>
-
-
-
 
 
         <TableLayout
@@ -240,24 +657,28 @@
                 android:layout_height="match_parent">
 
                 <CheckBox
+                    android:textColor="#FFFFFF"
                     android:id="@+id/checkBox17"
                     android:layout_width="match_parent"
                     android:layout_height="wrap_content"
                     android:text="三站台" />
 
                 <CheckBox
+                    android:textColor="#FFFFFF"
                     android:id="@+id/checkBox18"
                     android:layout_width="match_parent"
                     android:layout_height="wrap_content"
                     android:text="终点站" />
 
                 <CheckBox
+                    android:textColor="#FFFFFF"
                     android:id="@+id/checkBox19"
                     android:layout_width="match_parent"
                     android:layout_height="wrap_content"
                     android:text="坏木马" />
 
                 <CheckBox
+                    android:textColor="#FFFFFF"
                     android:id="@+id/checkBox20"
                     android:layout_width="match_parent"
                     android:layout_height="wrap_content"
@@ -270,24 +691,28 @@
 
 
                 <CheckBox
+                    android:textColor="#FFFFFF"
                     android:id="@+id/checkBox21"
                     android:layout_width="match_parent"
                     android:layout_height="wrap_content"
                     android:text="二站台" />
 
                 <CheckBox
+                    android:textColor="#FFFFFF"
                     android:id="@+id/checkBox22"
                     android:layout_width="match_parent"
                     android:layout_height="wrap_content"
                     android:text="好木马" />
 
                 <CheckBox
+                    android:textColor="#FFFFFF"
                     android:id="@+id/checkBox23"
                     android:layout_width="match_parent"
                     android:layout_height="wrap_content"
                     android:text="三连废墟" />
 
                 <CheckBox
+                    android:textColor="#FFFFFF"
                     android:id="@+id/checkBox24"
                     android:layout_width="match_parent"
                     android:layout_height="wrap_content"
@@ -300,24 +725,28 @@
 
 
                 <CheckBox
+                    android:textColor="#FFFFFF"
                     android:id="@+id/checkBox25"
                     android:layout_width="match_parent"
                     android:layout_height="wrap_content"
                     android:text="鬼屋" />
 
                 <CheckBox
+                    android:textColor="#FFFFFF"
                     android:id="@+id/checkBox26"
                     android:layout_width="match_parent"
                     android:layout_height="wrap_content"
                     android:text="月亮河" />
 
                 <CheckBox
+                    android:textColor="#FFFFFF"
                     android:id="@+id/checkBox27"
                     android:layout_width="match_parent"
                     android:layout_height="wrap_content"
                     android:text="鬼屋废墟" />
 
                 <CheckBox
+                    android:textColor="#FFFFFF"
                     android:id="@+id/checkBox28"
                     android:layout_width="match_parent"
                     android:layout_height="wrap_content"
@@ -330,6 +759,7 @@
 
 
                 <CheckBox
+                    android:textColor="#FFFFFF"
                     android:id="@+id/checkBox29"
                     android:layout_width="match_parent"
                     android:layout_height="wrap_content"
@@ -348,24 +778,28 @@
                 android:layout_height="match_parent">
 
                 <CheckBox
+                    android:textColor="#FFFFFF"
                     android:id="@+id/checkBox30"
                     android:layout_width="match_parent"
                     android:layout_height="wrap_content"
                     android:text="中推" />
 
                 <CheckBox
+                    android:textColor="#FFFFFF"
                     android:id="@+id/checkBox31"
                     android:layout_width="match_parent"
                     android:layout_height="wrap_content"
                     android:text="小推" />
 
                 <CheckBox
+                    android:textColor="#FFFFFF"
                     android:id="@+id/checkBox32"
                     android:layout_width="match_parent"
                     android:layout_height="wrap_content"
                     android:text="红地毯" />
 
                 <CheckBox
+                    android:textColor="#FFFFFF"
                     android:id="@+id/checkBox33"
                     android:layout_width="match_parent"
                     android:layout_height="wrap_content"
@@ -378,24 +812,28 @@
 
 
                 <CheckBox
+                    android:textColor="#FFFFFF"
                     android:id="@+id/checkBox34"
                     android:layout_width="match_parent"
                     android:layout_height="wrap_content"
                     android:text="教堂" />
 
                 <CheckBox
+                    android:textColor="#FFFFFF"
                     android:id="@+id/checkBox35"
                     android:layout_width="match_parent"
                     android:layout_height="wrap_content"
                     android:text="大推" />
 
                 <CheckBox
+                    android:textColor="#FFFFFF"
                     android:id="@+id/checkBox36"
                     android:layout_width="match_parent"
                     android:layout_height="wrap_content"
                     android:text="墓地" />
 
                 <CheckBox
+                    android:textColor="#FFFFFF"
                     android:id="@+id/checkBox37"
                     android:layout_width="match_parent"
                     android:layout_height="wrap_content"
@@ -408,12 +846,14 @@
 
 
                 <CheckBox
+                    android:textColor="#FFFFFF"
                     android:id="@+id/checkBox38"
                     android:layout_width="match_parent"
                     android:layout_height="wrap_content"
                     android:text="大门" />
 
                 <CheckBox
+                    android:textColor="#FFFFFF"
                     android:id="@+id/checkBox39"
                     android:layout_width="match_parent"
                     android:layout_height="wrap_content"
@@ -432,24 +872,28 @@
                 android:layout_height="match_parent">
 
                 <CheckBox
+                    android:textColor="#FFFFFF"
                     android:id="@+id/checkBox40"
                     android:layout_width="match_parent"
                     android:layout_height="wrap_content"
                     android:text="海边废墟" />
 
                 <CheckBox
+                    android:textColor="#FFFFFF"
                     android:id="@+id/checkBox41"
                     android:layout_width="match_parent"
                     android:layout_height="wrap_content"
                     android:text="中场" />
 
                 <CheckBox
+                    android:textColor="#FFFFFF"
                     android:id="@+id/checkBox42"
                     android:layout_width="match_parent"
                     android:layout_height="wrap_content"
                     android:text="厕所" />
 
                 <CheckBox
+                    android:textColor="#FFFFFF"
                     android:id="@+id/checkBox43"
                     android:layout_width="match_parent"
                     android:layout_height="wrap_content"
@@ -462,24 +906,28 @@
 
 
                 <CheckBox
+                    android:textColor="#FFFFFF"
                     android:id="@+id/checkBox44"
                     android:layout_width="match_parent"
                     android:layout_height="wrap_content"
                     android:text="木屋" />
 
                 <CheckBox
+                    android:textColor="#FFFFFF"
                     android:id="@+id/checkBox45"
                     android:layout_width="match_parent"
                     android:layout_height="wrap_content"
                     android:text="小船" />
 
                 <CheckBox
+                    android:textColor="#FFFFFF"
                     android:id="@+id/checkBox46"
                     android:layout_width="match_parent"
                     android:layout_height="wrap_content"
                     android:text="大门废墟" />
 
                 <CheckBox
+                    android:textColor="#FFFFFF"
                     android:id="@+id/checkBox47"
                     android:layout_width="match_parent"
                     android:layout_height="wrap_content"
@@ -492,24 +940,28 @@
 
 
                 <CheckBox
+                    android:textColor="#FFFFFF"
                     android:id="@+id/checkBox48"
                     android:layout_width="match_parent"
                     android:layout_height="wrap_content"
                     android:text="玉米地" />
 
                 <CheckBox
+                    android:textColor="#FFFFFF"
                     android:id="@+id/checkBox49"
                     android:layout_width="match_parent"
                     android:layout_height="wrap_content"
                     android:text="船尾" />
 
                 <CheckBox
+                    android:textColor="#FFFFFF"
                     android:id="@+id/checkBox50"
                     android:layout_width="match_parent"
                     android:layout_height="wrap_content"
                     android:text="大船" />
 
                 <CheckBox
+                    android:textColor="#FFFFFF"
                     android:id="@+id/checkBox51"
                     android:layout_width="match_parent"
                     android:layout_height="wrap_content"
@@ -523,28 +975,222 @@
 
             </TableRow>
         </TableLayout>
-        <TableLayout
-            android:id="@+id/rio_memory_killer"
-            android:layout_width="match_parent"
-            android:layout_height="match_parent"
-            android:visibility="gone">
-        </TableLayout>
-        <TableLayout
-            android:id="@+id/town_killer"
-            android:layout_width="match_parent"
-            android:layout_height="match_parent"
-            android:visibility="gone">
-        </TableLayout>
+
+
 
         <TextView
 
             android:id="@+id/tf"
             android:layout_width="match_parent"
             android:layout_height="30dp"
-
+            android:visibility="gone"
             android:gravity="center"
             android:text="屠夫"
             android:textColor="@android:color/white" />
+
+        <TableLayout
+            android:id="@+id/chinese_street_killer"
+            android:layout_width="match_parent"
+            android:layout_height="match_parent"
+            android:visibility="gone">
+            <TableRow
+                android:layout_width="match_parent"
+                android:layout_height="match_parent" >
+                <CheckBox
+                    android:textColor="#FFFFFF"
+                    android:id="@+id/checkBox127"
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:text="裁缝铺"
+                    android:tag="caifengpu" />
+                <CheckBox
+                    android:textColor="#FFFFFF"
+                    android:id="@+id/checkBox128"
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:text="古树剧场"
+                    android:tag="gushujuchang" />
+                <CheckBox
+                    android:textColor="#FFFFFF"
+                    android:id="@+id/checkBox129"
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:text="御景轩"
+                    android:tag="yujingxuan" />
+                <CheckBox
+                    android:textColor="#FFFFFF"
+                    android:id="@+id/checkBox130"
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:text="杂货店"
+                    android:tag="zahuodian" />
+            </TableRow>
+            <TableRow
+                android:layout_width="match_parent"
+                android:layout_height="match_parent">
+
+
+                <CheckBox
+                    android:textColor="#FFFFFF"
+                    android:id="@+id/checkBox131"
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:text="早茶店"
+                    android:tag="zaochadian" />
+            </TableRow>
+        </TableLayout>
+
+        <TableLayout
+            android:id="@+id/town_killer"
+            android:layout_width="match_parent"
+            android:layout_height="match_parent"
+            android:visibility="gone">
+            <TableRow
+                android:layout_width="match_parent"
+                android:layout_height="match_parent" >
+                <CheckBox
+                    android:textColor="#FFFFFF"
+                    android:id="@+id/checkBox132"
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:text="大门"
+                    android:tag="damen" />
+                <CheckBox
+                    android:textColor="#FFFFFF"
+                    android:id="@+id/checkBox133"
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:text="红蝶桥"
+                    android:tag="hongdieqiao" />
+                <CheckBox
+                    android:textColor="#FFFFFF"
+                    android:id="@+id/checkBox134"
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:text="假门"
+                    android:tag="jiamen" />
+                <CheckBox
+                    android:textColor="#FFFFFF"
+                    android:id="@+id/checkBox135"
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:text="假门废墟"
+                    android:tag="jiamenfeixu" />
+            </TableRow>
+            <TableRow
+                android:layout_width="match_parent"
+                android:layout_height="match_parent">
+
+
+                <CheckBox
+                    android:textColor="#FFFFFF"
+                    android:id="@+id/checkBox136"
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:text="角落楼"
+                    android:tag="jiaoluolou" />
+                <CheckBox
+                    android:textColor="#FFFFFF"
+                    android:id="@+id/checkBox137"
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:text="墓地入口"
+                    android:tag="mudirukou" />
+                <CheckBox
+                    android:textColor="#FFFFFF"
+                    android:id="@+id/checkBox138"
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:text="小门"
+                    android:tag="xiaomen" />
+            </TableRow>
+        </TableLayout>
+
+        <TableLayout
+            android:id="@+id/rio_memory_killer"
+            android:layout_width="match_parent"
+            android:layout_height="match_parent"
+            android:visibility="gone">
+            <TableRow
+                android:layout_width="match_parent"
+                android:layout_height="match_parent" >
+                <CheckBox
+                    android:textColor="#FFFFFF"
+                    android:id="@+id/checkBox139"
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:text="大房"
+                    android:tag="dafang" />
+                <CheckBox
+                    android:textColor="#FFFFFF"
+                    android:id="@+id/checkBox140"
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:text="大房窗口左"
+                    android:tag="dafangchuangkouzuo" />
+                <CheckBox
+                    android:textColor="#FFFFFF"
+                    android:id="@+id/checkBox141"
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:text="大房角落"
+                    android:tag="dafangjiaoluo" />
+                <CheckBox
+                    android:textColor="#FFFFFF"
+                    android:id="@+id/checkBox142"
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:text="集装箱"
+                    android:tag="jizhuangxiang" />
+            </TableRow>
+            <TableRow
+                android:layout_width="match_parent"
+                android:layout_height="match_parent">
+
+
+                <CheckBox
+                    android:textColor="#FFFFFF"
+                    android:id="@+id/checkBox143"
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:text="木屋窗口"
+                    android:tag="muwuchuangkou" />
+                <CheckBox
+                    android:textColor="#FFFFFF"
+                    android:id="@+id/checkBox144"
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:text="木屋入口"
+                    android:tag="muwurukou" />
+                <CheckBox
+                    android:textColor="#FFFFFF"
+                    android:id="@+id/checkBox145"
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:text="圣诞门"
+                    android:tag="shengdanmen" />
+                <CheckBox
+                    android:textColor="#FFFFFF"
+                    android:id="@+id/checkBox146"
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:text="油罐附近"
+                    android:tag="youguanfujin" />
+            </TableRow>
+            <TableRow
+                android:layout_width="match_parent"
+                android:layout_height="match_parent">
+
+
+                <CheckBox
+                    android:textColor="#FFFFFF"
+                    android:id="@+id/checkBox147"
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:text="月亮门废墟"
+                    android:tag="yueliangmenfeixu" />
+            </TableRow>
+        </TableLayout>
 
         <TableLayout
             android:id="@+id/village_killer"
@@ -557,32 +1203,36 @@
                 android:layout_height="match_parent">
 
                 <CheckBox
+                    android:textColor="#FFFFFF"
                     android:id="@+id/checkBox52"
                     android:layout_width="match_parent"
                     android:layout_height="wrap_content"
-                    android:text="大船"
-                    android:tag="dachuan"/>
+                    android:tag="dachuan"
+                    android:text="大船" />
 
                 <CheckBox
+                    android:textColor="#FFFFFF"
                     android:id="@+id/checkBox53"
                     android:layout_width="match_parent"
                     android:layout_height="wrap_content"
-                    android:text="大门两板"
-                    android:tag="damenliangban"/>
+                    android:tag="damenliangban"
+                    android:text="大门两板" />
 
                 <CheckBox
+                    android:textColor="#FFFFFF"
                     android:id="@+id/checkBox54"
                     android:layout_width="match_parent"
                     android:layout_height="wrap_content"
-                    android:text="海边"
-                    android:tag="haibian"/>
+                    android:tag="haibian"
+                    android:text="海边" />
 
                 <CheckBox
+                    android:textColor="#FFFFFF"
                     android:id="@+id/checkBox55"
                     android:layout_width="match_parent"
                     android:layout_height="wrap_content"
-                    android:text="木屋风车"
-                    android:tag="muwufengche"/>
+                    android:tag="muwufengche"
+                    android:text="木屋风车" />
             </TableRow>
 
             <TableRow
@@ -591,25 +1241,28 @@
 
 
                 <CheckBox
+                    android:textColor="#FFFFFF"
                     android:id="@+id/checkBox56"
                     android:layout_width="match_parent"
                     android:layout_height="wrap_content"
-                    android:text="双十一"
-                    android:tag="shuangshiyi"/>
+                    android:tag="shuangshiyi"
+                    android:text="双十一" />
 
                 <CheckBox
+                    android:textColor="#FFFFFF"
                     android:id="@+id/checkBox57"
                     android:layout_width="match_parent"
                     android:layout_height="wrap_content"
-                    android:text="小船后两板"
-                    android:tag="xiaochuanhouliangban"/>
+                    android:tag="xiaochuanhouliangban"
+                    android:text="小船后两板" />
 
                 <CheckBox
+                    android:textColor="#FFFFFF"
                     android:id="@+id/checkBox58"
                     android:layout_width="match_parent"
                     android:layout_height="wrap_content"
-                    android:text="玉米地"
-                    android:tag="yumidi"/>
+                    android:tag="yumidi"
+                    android:text="玉米地" />
             </TableRow>
         </TableLayout>
 
@@ -624,32 +1277,36 @@
                 android:layout_height="match_parent">
 
                 <CheckBox
+                    android:textColor="#FFFFFF"
                     android:id="@+id/checkBox59"
                     android:layout_width="match_parent"
                     android:layout_height="wrap_content"
-                    android:text="墓地地窖点"
-                    android:tag="mudidijiaodian"/>
+                    android:tag="mudidijiaodian"
+                    android:text="墓地地窖点" />
 
                 <CheckBox
+                    android:textColor="#FFFFFF"
                     android:id="@+id/checkBox60"
                     android:layout_width="match_parent"
                     android:layout_height="wrap_content"
-                    android:text="红地毯左"
-                    android:tag="hongditanzuo"/>
+                    android:tag="hongditanzuo"
+                    android:text="红地毯左" />
 
                 <CheckBox
+                    android:textColor="#FFFFFF"
                     android:id="@+id/checkBox61"
                     android:layout_width="match_parent"
                     android:layout_height="wrap_content"
-                    android:text="教堂内"
-                    android:tag="jiaotangnei"/>
+                    android:tag="jiaotangnei"
+                    android:text="教堂内" />
 
                 <CheckBox
+                    android:textColor="#FFFFFF"
                     android:id="@+id/checkBox62"
                     android:layout_width="match_parent"
                     android:layout_height="wrap_content"
-                    android:text="大推"
-                    android:tag="datui"/>
+                    android:tag="datui"
+                    android:text="大推" />
             </TableRow>
 
             <TableRow
@@ -658,18 +1315,20 @@
 
 
                 <CheckBox
+                    android:textColor="#FFFFFF"
                     android:id="@+id/checkBox63"
                     android:layout_width="match_parent"
                     android:layout_height="wrap_content"
-                    android:text="墓地靠教堂"
-                    android:tag="mudikaojiaotang"/>
+                    android:tag="mudikaojiaotang"
+                    android:text="墓地靠教堂" />
 
                 <CheckBox
+                    android:textColor="#FFFFFF"
                     android:id="@+id/checkBox64"
                     android:layout_width="match_parent"
                     android:layout_height="wrap_content"
-                    android:text="墓地椅子旁"
-                    android:tag="mudiyizipang"/>
+                    android:tag="mudiyizipang"
+                    android:text="墓地椅子旁" />
             </TableRow>
         </TableLayout>
 
@@ -684,32 +1343,36 @@
                 android:layout_height="match_parent">
 
                 <CheckBox
+                    android:textColor="#FFFFFF"
                     android:id="@+id/checkBox65"
                     android:layout_width="match_parent"
                     android:layout_height="wrap_content"
-                    android:text="厂房左侧"
-                    android:tag="changfangzuoce"/>
+                    android:tag="changfangzuoce"
+                    android:text="厂房左侧" />
 
                 <CheckBox
+                    android:textColor="#FFFFFF"
                     android:id="@+id/checkBox66"
                     android:layout_width="match_parent"
                     android:layout_height="wrap_content"
-                    android:text="大门废墟"
-                    android:tag="damenfeixu"/>
+                    android:tag="damenfeixu"
+                    android:text="大门废墟" />
 
                 <CheckBox
+                    android:textColor="#FFFFFF"
                     android:id="@+id/checkBox67"
                     android:layout_width="match_parent"
                     android:layout_height="wrap_content"
-                    android:text="木屋窗口"
-                    android:tag="muwuchuangkou"/>
+                    android:tag="muwuchuangkou"
+                    android:text="木屋窗口" />
 
                 <CheckBox
+                    android:textColor="#FFFFFF"
                     android:id="@+id/checkBox68"
                     android:layout_width="match_parent"
                     android:layout_height="wrap_content"
-                    android:text="木屋右侧"
-                    android:tag="muwuyouce"/>
+                    android:tag="muwuyouce"
+                    android:text="木屋右侧" />
             </TableRow>
 
             <TableRow
@@ -718,18 +1381,20 @@
 
 
                 <CheckBox
+                    android:textColor="#FFFFFF"
                     android:id="@+id/checkBox69"
                     android:layout_width="match_parent"
                     android:layout_height="wrap_content"
-                    android:text="小门"
-                    android:tag="xiaomen"/>
+                    android:tag="xiaomen"
+                    android:text="小门" />
 
                 <CheckBox
+                    android:textColor="#FFFFFF"
                     android:id="@+id/checkBox70"
                     android:layout_width="match_parent"
                     android:layout_height="wrap_content"
-                    android:text="小门废墟"
-                    android:tag="xiaomenfeixu"/>
+                    android:tag="xiaomenfeixu"
+                    android:text="小门废墟" />
             </TableRow>
         </TableLayout>
 
@@ -744,32 +1409,36 @@
                 android:layout_height="match_parent">
 
                 <CheckBox
+                    android:textColor="#FFFFFF"
                     android:id="@+id/checkBox71"
                     android:layout_width="match_parent"
                     android:layout_height="wrap_content"
-                    android:text="女神像废墟"
-                    android:tag="nvshenxiangfeixu"/>
+                    android:tag="nvshenxiangfeixu"
+                    android:text="女神像废墟" />
 
                 <CheckBox
+                    android:textColor="#FFFFFF"
                     android:id="@+id/checkBox74"
                     android:layout_width="match_parent"
                     android:layout_height="wrap_content"
-                    android:text="木屋废墟"
-                    android:tag="muwufeixu"/>
+                    android:tag="muwufeixu"
+                    android:text="木屋废墟" />
 
                 <CheckBox
+                    android:textColor="#FFFFFF"
                     android:id="@+id/checkBox76"
                     android:layout_width="match_parent"
                     android:layout_height="wrap_content"
-                    android:text="女神像"
-                    android:tag="nvshenxiang"/>
+                    android:tag="nvshenxiang"
+                    android:text="女神像" />
 
                 <CheckBox
+                    android:textColor="#FFFFFF"
                     android:id="@+id/checkBox73"
                     android:layout_width="match_parent"
                     android:layout_height="wrap_content"
-                    android:text="正门废墟"
-                    android:tag="zhengmenfeixu"/>
+                    android:tag="zhengmenfeixu"
+                    android:text="正门废墟" />
             </TableRow>
 
             <TableRow
@@ -778,18 +1447,20 @@
 
 
                 <CheckBox
+                    android:textColor="#FFFFFF"
                     android:id="@+id/checkBox72"
                     android:layout_width="match_parent"
                     android:layout_height="wrap_content"
-                    android:text="医院正门二楼"
-                    android:tag="yiyuanzhengmenerlou"/>
+                    android:tag="yiyuanzhengmenerlou"
+                    android:text="医院正门二楼" />
 
                 <CheckBox
+                    android:textColor="#FFFFFF"
                     android:id="@+id/checkBox75"
                     android:layout_width="match_parent"
                     android:layout_height="wrap_content"
-                    android:text="无敌废墟"
-                    android:tag="wudifeixu"/>
+                    android:tag="wudifeixu"
+                    android:text="无敌废墟" />
 
             </TableRow>
         </TableLayout>
@@ -805,32 +1476,36 @@
                 android:layout_height="match_parent">
 
                 <CheckBox
+                    android:textColor="#FFFFFF"
                     android:id="@+id/checkBox77"
                     android:layout_width="match_parent"
                     android:layout_height="wrap_content"
-                    android:text="鬼屋"
-                    android:tag="guiwu"/>
+                    android:tag="guiwu"
+                    android:text="鬼屋" />
 
                 <CheckBox
+                    android:textColor="#FFFFFF"
                     android:id="@+id/checkBox78"
                     android:layout_width="match_parent"
                     android:layout_height="wrap_content"
-                    android:text="鬼屋废墟"
-                    android:tag="guiwufeixu"/>
+                    android:tag="guiwufeixu"
+                    android:text="鬼屋废墟" />
 
                 <CheckBox
+                    android:textColor="#FFFFFF"
                     android:id="@+id/checkBox79"
                     android:layout_width="match_parent"
                     android:layout_height="wrap_content"
-                    android:text="鬼屋桥上"
-                    android:tag="guiwuqiaoshang"/>
+                    android:tag="guiwuqiaoshang"
+                    android:text="鬼屋桥上" />
 
                 <CheckBox
+                    android:textColor="#FFFFFF"
                     android:id="@+id/checkBox80"
                     android:layout_width="match_parent"
                     android:layout_height="wrap_content"
-                    android:text="鬼屋桥左"
-                    android:tag="guiwuqiaozuo"/>
+                    android:tag="guiwuqiaozuo"
+                    android:text="鬼屋桥左" />
             </TableRow>
 
             <TableRow
@@ -839,31 +1514,34 @@
 
 
                 <CheckBox
+                    android:textColor="#FFFFFF"
                     android:id="@+id/checkBox81"
                     android:layout_width="match_parent"
                     android:layout_height="wrap_content"
-                    android:text="坏木马"
-                    android:tag="huaimuma"/>
+                    android:tag="huaimuma"
+                    android:text="坏木马" />
 
                 <CheckBox
+                    android:textColor="#FFFFFF"
                     android:id="@+id/checkBox82"
                     android:layout_width="match_parent"
                     android:layout_height="wrap_content"
-                    android:text="马戏团"
-                    android:tag="maxituan"/>
+                    android:tag="maxituan"
+                    android:text="马戏团" />
 
                 <CheckBox
+                    android:textColor="#FFFFFF"
                     android:id="@+id/checkBox83"
                     android:layout_width="match_parent"
                     android:layout_height="wrap_content"
-                    android:text="三连废墟"
-                    android:tag="sanlianfeixu"/>
+                    android:tag="sanlianfeixu"
+                    android:text="三连废墟" />
             </TableRow>
         </TableLayout>
 
         <android.support.v4.view.ViewPager
             android:id="@+id/viewPager"
-            android:layout_width="340dp"
+            android:layout_width="300dp"
             android:layout_height="200dp"
 
             android:visibility="gone" />
@@ -900,11 +1578,12 @@
             <TextView
                 android:id="@+id/human"
                 android:layout_width="0dp"
-                android:layout_height="40dip"
+                android:layout_height="0dip"
                 android:layout_gravity="center_vertical"
                 android:layout_weight="1"
                 android:gravity="center"
                 android:text="人"
+                android:visibility="gone"
                 android:textColor="@android:color/white" />
 
             <TextView
@@ -926,6 +1605,7 @@
                 android:gravity="center"
                 android:text="约"
                 android:textColor="@android:color/white" />
+
             <TextView
                 android:id="@+id/cellar"
                 android:layout_width="0dp"
