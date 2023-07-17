@@ -29,8 +29,8 @@ import java.util.logging.Logger;
 import java.util.stream.Collectors;
 
 /**
- * Author:pdm on 2016/10/12
- * Email:aiyh0202@163.com
+ * Author:pdm on 2016/10/12 fran·pav on 2023
+ * Email:aiyh0202@163.com;basslike@163.com
  */
 public class FloatWindowBig extends LinearLayout {
     /**
@@ -274,7 +274,9 @@ public class FloatWindowBig extends LinearLayout {
                     pagerAdapter.setData(list);
                     viewPager.setVisibility(View.VISIBLE);
                     pagerAdapter.notifyDataSetChanged();
+                    radioGroup.setVisibility(View.GONE);
                     ChangeVisibility(context, Data.map, View.GONE);
+
 
                 } catch (IOException e) {
                     Toast.makeText(context, "错误FWB247,文件不存在", Toast.LENGTH_LONG).show();

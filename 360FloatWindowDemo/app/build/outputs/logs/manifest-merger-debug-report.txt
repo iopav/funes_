@@ -24,7 +24,7 @@ INJECTED from D:\workplace\funes_\360FloatWindowDemo\app\src\main\AndroidManifes
 		INJECTED from D:\workplace\funes_\360FloatWindowDemo\app\src\main\AndroidManifest.xml
 		INJECTED from D:\workplace\funes_\360FloatWindowDemo\app\src\main\AndroidManifest.xml
 	android:versionName
-		ADDED from D:\workplace\funes_\360FloatWindowDemo\app\src\main\AndroidManifest.xml:5:5-30
+		ADDED from D:\workplace\funes_\360FloatWindowDemo\app\src\main\AndroidManifest.xml:5:5-32
 		INJECTED from D:\workplace\funes_\360FloatWindowDemo\app\src\main\AndroidManifest.xml
 		INJECTED from D:\workplace\funes_\360FloatWindowDemo\app\src\main\AndroidManifest.xml
 	xmlns:android

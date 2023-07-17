@@ -15,21 +15,14 @@
     <option name="autoReloadType" value="NONE" />
   </component>
   <component name="ChangeListManager">
-    <list default="true" id="1b8ba6ce-8ef2-4b7c-b273-3bb792dc8a92" name="Default" comment="v1.2">
-      <change beforePath="$PROJECT_DIR$/.idea/modules/app/360FloatWindowDemo.app.androidTest.iml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/modules/app/360FloatWindowDemo.app.androidTest.iml" afterDir="false" />
+    <list default="true" id="1b8ba6ce-8ef2-4b7c-b273-3bb792dc8a92" name="Default" comment="v1.4.1">
       <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/app/build.gradle" beforeDir="false" afterPath="$PROJECT_DIR$/app/build.gradle" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/app/build/generated/source/buildConfig/androidTest/debug/com/demo/floatwindowdemo/test/BuildConfig.java" beforeDir="false" afterPath="$PROJECT_DIR$/app/build/generated/source/buildConfig/androidTest/debug/com/demo/floatwindowdemo/test/BuildConfig.java" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/app/build/generated/source/buildConfig/debug/com/demo/floatwindowdemo/BuildConfig.java" beforeDir="false" afterPath="$PROJECT_DIR$/app/build/generated/source/buildConfig/debug/com/demo/floatwindowdemo/BuildConfig.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/app/build/intermediates/incremental/mergeDebugAndroidTestResources/compile-file-map.properties" beforeDir="false" afterPath="$PROJECT_DIR$/app/build/intermediates/incremental/mergeDebugAndroidTestResources/compile-file-map.properties" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/app/build/intermediates/incremental/mergeDebugAndroidTestResources/merger.xml" beforeDir="false" afterPath="$PROJECT_DIR$/app/build/intermediates/incremental/mergeDebugAndroidTestResources/merger.xml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/app/build/intermediates/incremental/mergeDebugAssets/merger.xml" beforeDir="false" afterPath="$PROJECT_DIR$/app/build/intermediates/incremental/mergeDebugAssets/merger.xml" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/app/build/intermediates/incremental/mergeDebugResources/compile-file-map.properties" beforeDir="false" afterPath="$PROJECT_DIR$/app/build/intermediates/incremental/mergeDebugResources/compile-file-map.properties" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/app/build/intermediates/incremental/mergeDebugResources/merger.xml" beforeDir="false" afterPath="$PROJECT_DIR$/app/build/intermediates/incremental/mergeDebugResources/merger.xml" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/app/build/outputs/logs/manifest-merger-debug-report.txt" beforeDir="false" afterPath="$PROJECT_DIR$/app/build/outputs/logs/manifest-merger-debug-report.txt" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/app/src/main/AndroidManifest.xml" beforeDir="false" afterPath="$PROJECT_DIR$/app/src/main/AndroidManifest.xml" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/app/src/main/java/com/demo/floatwindowdemo/FloatWindowBig.java" beforeDir="false" afterPath="$PROJECT_DIR$/app/src/main/java/com/demo/floatwindowdemo/FloatWindowBig.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/app/src/main/res/layout/activity_main.xml" beforeDir="false" afterPath="$PROJECT_DIR$/app/src/main/res/layout/activity_main.xml" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/app/src/main/java/com/demo/floatwindowdemo/FloatWindowSmall.java" beforeDir="false" afterPath="$PROJECT_DIR$/app/src/main/java/com/demo/floatwindowdemo/FloatWindowSmall.java" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/app/src/main/res/layout/float_window_big.xml" beforeDir="false" afterPath="$PROJECT_DIR$/app/src/main/res/layout/float_window_big.xml" afterDir="false" />
     </list>
     <option name="SHOW_DIALOG" value="false" />
@@ -2314,7 +2307,14 @@
       <option name="project" value="LOCAL" />
       <updated>1674294373286</updated>
     </task>
-    <option name="localTasksCounter" value="3" />
+    <task id="LOCAL-00003" summary="v1.4.1">
+      <created>1680241300362</created>
+      <option name="number" value="00003" />
+      <option name="presentableId" value="LOCAL-00003" />
+      <option name="project" value="LOCAL" />
+      <updated>1680241300362</updated>
+    </task>
+    <option name="localTasksCounter" value="4" />
     <servers />
   </component>
   <component name="ToolWindowManager">
@@ -2381,7 +2381,8 @@
   <component name="VcsManagerConfiguration">
     <MESSAGE value="v1.0" />
     <MESSAGE value="v1.2" />
-    <option name="LAST_COMMIT_MESSAGE" value="v1.2" />
+    <MESSAGE value="v1.4.1" />
+    <option name="LAST_COMMIT_MESSAGE" value="v1.4.1" />
   </component>
   <component name="XDebuggerManager">
     <breakpoint-manager>

@@ -188,29 +188,30 @@ public class FloatWindowSmall extends LinearLayout {
 	}
 	/**
 	 * 计算已使用内存的百分比
-	 *
+	 * 2023年7月17日已删减该功能
 	 * @return 返回百分比。
 	 */
 	public String getUsedPercentValue() {
 		//内存信息文件（CPU信息文件：/proc/cpuinfo）这两个文件是linux系统用来存储内存和CPU信息的
-		String dir = "/proc/meminfo";
+//		String dir = "/proc/meminfo";
 		try {
-			FileReader fr = new FileReader(dir);
-			//创建读取字符流缓存区
-			BufferedReader br = new BufferedReader(fr, 2048);
-			//读取第一行字符
-			String memoryLine = br.readLine();
-			String subMemoryLine = memoryLine.substring(memoryLine.indexOf("MemTotal:"));
-			memoryLine = br.readLine();
-			String availableMemoryLine = memoryLine.substring(memoryLine.indexOf("MemFree:"));
-			br.close();
-			//获取总的内存,这里需要注意的是replaceAll支持正则表达式"\\D"代表所有的字母字符，只保留数字部分
-			long totalMemorySize = Integer.parseInt(subMemoryLine.replaceAll("\\D+", ""));
-			//获取当前可用内存
-			long availableSize = Integer.parseInt(availableMemoryLine.replaceAll("\\D+", ""));
-			int percent = (int) ((totalMemorySize - availableSize) / (float) totalMemorySize * 100);
-			return percent + "%";
-		} catch (IOException e) {
+//			FileReader fr = new FileReader(dir);
+//			//创建读取字符流缓存区
+//			BufferedReader br = new BufferedReader(fr, 2048);
+//			//读取第一行字符
+//			String memoryLine = br.readLine();
+//			String subMemoryLine = memoryLine.substring(memoryLine.indexOf("MemTotal:"));
+//			memoryLine = br.readLine();
+//			String availableMemoryLine = memoryLine.substring(memoryLine.indexOf("MemFree:"));
+//			br.close();
+//			//获取总的内存,这里需要注意的是replaceAll支持正则表达式"\\D"代表所有的字母字符，只保留数字部分
+//			long totalMemorySize = Integer.parseInt(subMemoryLine.replaceAll("\\D+", ""));
+//			//获取当前可用内存
+//			long availableSize = Integer.parseInt(availableMemoryLine.replaceAll("\\D+", ""));
+//			int percent = (int) ((totalMemorySize - availableSize) / (float) totalMemorySize * 100);
+//			return percent + "%"; 2023年7月17日更新删除这部分内容加快运行速度
+			return  "0%";
+		} catch (Exception e) {
 			e.printStackTrace();
 		}
 		return "悬浮窗";

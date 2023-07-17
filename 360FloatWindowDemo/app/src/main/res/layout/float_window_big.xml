@@ -1024,6 +1024,7 @@
                     android:layout_height="wrap_content"
                     android:text="杂货店"
                     android:tag="zahuodian" />
+
             </TableRow>
             <TableRow
                 android:layout_width="match_parent"
@@ -1037,6 +1038,13 @@
                     android:layout_height="wrap_content"
                     android:text="早茶店"
                     android:tag="zaochadian" />
+                <CheckBox
+                    android:textColor="#FFFFFF"
+                    android:id="@+id/checkBox2lou"
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:text="二楼"
+                    android:tag="zuifangting" />
             </TableRow>
         </TableLayout>
 
@@ -1167,7 +1175,7 @@
                     android:id="@+id/checkBox145"
                     android:layout_width="match_parent"
                     android:layout_height="wrap_content"
-                    android:text="圣诞门"
+                    android:text="坦克门"
                     android:tag="shengdanmen" />
                 <CheckBox
                     android:textColor="#FFFFFF"
@@ -1372,7 +1380,7 @@
                     android:layout_width="match_parent"
                     android:layout_height="wrap_content"
                     android:tag="muwuyouce"
-                    android:text="木屋右侧" />
+                    android:text="木屋大石头" />
             </TableRow>
 
             <TableRow
@@ -1394,7 +1402,7 @@
                     android:layout_width="match_parent"
                     android:layout_height="wrap_content"
                     android:tag="xiaomenfeixu"
-                    android:text="小门废墟" />
+                    android:text="小门废墟椅" />
             </TableRow>
         </TableLayout>
 
@@ -1541,7 +1549,7 @@
 
         <android.support.v4.view.ViewPager
             android:id="@+id/viewPager"
-            android:layout_width="300dp"
+            android:layout_width="200dp"
             android:layout_height="200dp"
 
             android:visibility="gone" />
