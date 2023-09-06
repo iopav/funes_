@@ -15,16 +15,7 @@
     <option name="autoReloadType" value="NONE" />
   </component>
   <component name="ChangeListManager">
-    <list default="true" id="1b8ba6ce-8ef2-4b7c-b273-3bb792dc8a92" name="Default" comment="v1.4.1">
-      <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/app/build/generated/source/buildConfig/debug/com/demo/floatwindowdemo/BuildConfig.java" beforeDir="false" afterPath="$PROJECT_DIR$/app/build/generated/source/buildConfig/debug/com/demo/floatwindowdemo/BuildConfig.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/app/build/intermediates/incremental/mergeDebugResources/compile-file-map.properties" beforeDir="false" afterPath="$PROJECT_DIR$/app/build/intermediates/incremental/mergeDebugResources/compile-file-map.properties" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/app/build/outputs/logs/manifest-merger-debug-report.txt" beforeDir="false" afterPath="$PROJECT_DIR$/app/build/outputs/logs/manifest-merger-debug-report.txt" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/app/src/main/AndroidManifest.xml" beforeDir="false" afterPath="$PROJECT_DIR$/app/src/main/AndroidManifest.xml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/app/src/main/java/com/demo/floatwindowdemo/FloatWindowBig.java" beforeDir="false" afterPath="$PROJECT_DIR$/app/src/main/java/com/demo/floatwindowdemo/FloatWindowBig.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/app/src/main/java/com/demo/floatwindowdemo/FloatWindowSmall.java" beforeDir="false" afterPath="$PROJECT_DIR$/app/src/main/java/com/demo/floatwindowdemo/FloatWindowSmall.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/app/src/main/res/layout/float_window_big.xml" beforeDir="false" afterPath="$PROJECT_DIR$/app/src/main/res/layout/float_window_big.xml" afterDir="false" />
-    </list>
+    <list default="true" id="1b8ba6ce-8ef2-4b7c-b273-3bb792dc8a92" name="Default" comment="v1.4.2" />
     <option name="SHOW_DIALOG" value="false" />
     <option name="HIGHLIGHT_CONFLICTS" value="true" />
     <option name="HIGHLIGHT_NON_ACTIVE_CHANGELIST" value="false" />
@@ -2314,7 +2305,14 @@
       <option name="project" value="LOCAL" />
       <updated>1680241300362</updated>
     </task>
-    <option name="localTasksCounter" value="4" />
+    <task id="LOCAL-00004" summary="v1.4.2">
+      <created>1689580874341</created>
+      <option name="number" value="00004" />
+      <option name="presentableId" value="LOCAL-00004" />
+      <option name="project" value="LOCAL" />
+      <updated>1689580874341</updated>
+    </task>
+    <option name="localTasksCounter" value="5" />
     <servers />
   </component>
   <component name="ToolWindowManager">
@@ -2382,7 +2380,8 @@
     <MESSAGE value="v1.0" />
     <MESSAGE value="v1.2" />
     <MESSAGE value="v1.4.1" />
-    <option name="LAST_COMMIT_MESSAGE" value="v1.4.1" />
+    <MESSAGE value="v1.4.2" />
+    <option name="LAST_COMMIT_MESSAGE" value="v1.4.2" />
   </component>
   <component name="XDebuggerManager">
     <breakpoint-manager>
