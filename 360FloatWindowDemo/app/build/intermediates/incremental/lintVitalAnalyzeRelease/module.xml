@@ -1,0 +1,19 @@
+<lint-module
+    format="1"
+    dir="D:\workplace\funes_\360FloatWindowDemo\app"
+    name=":app"
+    type="APP"
+    maven="360FloatWindowDemo:app:"
+    gradle="7.1.2"
+    buildFolder="build"
+    bootClassPath="C:\Users\dell\AppData\Local\Android\Sdk\platforms\android-26\android.jar;C:\Users\dell\AppData\Local\Android\Sdk\build-tools\30.0.3\core-lambda-stubs.jar"
+    javaSourceLevel="1.8"
+    compileTarget="android-26"
+    neverShrinking="true">
+  <lintOptions
+      abortOnError="true"
+      absolutePaths="true"
+      checkReleaseBuilds="true"
+      explainIssues="true"/>
+  <variant name="release"/>
+</lint-module>

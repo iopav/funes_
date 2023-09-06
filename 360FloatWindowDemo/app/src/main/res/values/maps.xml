@@ -1,0 +1,15 @@
+<?xml version="1.0" encoding="utf-8"?>
+<resources>
+    <string-array name="maps">
+        <item>选择地图</item>
+        <item>军工厂</item>
+        <item>红教堂</item>
+        <item>圣心医院</item>
+        <item>湖景村</item>
+        <item>月亮河</item>
+        <item>冰工厂</item>
+        <item>永眠镇</item>
+    </string-array>
+
+
+</resources>
